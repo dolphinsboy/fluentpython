@@ -35,5 +35,6 @@ def test():
     v2 = Vector(1, 2)
 
     print v1+v2
+    print v2*4
 
 test()
