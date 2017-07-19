@@ -1,4 +1,5 @@
 import collections
+from random import choice
 
 Card = collections.namedtuple('Card', ['rank', 'suit'])
 
@@ -20,3 +21,13 @@ fd = FrenchDeck()
 
 print fd[0]
 print len(fd)
+print choice(fd)
+
+print fd[:3]
+
+for card in fd:
+    print card
+
+for card in reversed(fd):
+    print card
+
