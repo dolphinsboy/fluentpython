@@ -17,17 +17,30 @@ class FrenchDeck:
     def __getitem__(self, position):
         return self._cards[position]
 
-fd = FrenchDeck()
+def test_seq():
+    fd = FrenchDeck()
 
-print fd[0]
-print len(fd)
-print choice(fd)
+    print fd[0]
+    print len(fd)
+    print choice(fd)
 
-print fd[:3]
+    print fd[:3]
 
-for card in fd:
-    print card
+    for card in fd:
+        print card
 
-for card in reversed(fd):
-    print card
+    for card in reversed(fd):
+        print car
 
+def test_sort():
+    suit_values = dict(spades=3, diamonds=2, clubs=1, hearts=0)
+    def cmp(card):
+        rank_value = FrenchDeck.ranks.index(card.rank)
+        ret = rank_value * len(suit_values) + suit_values[card.suit]
+        return ret
+
+    fd = FrenchDeck()
+    for card in sorted(fd, key=cmp):
+        print card
+
+test_sort()
