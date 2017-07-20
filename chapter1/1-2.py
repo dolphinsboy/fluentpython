@@ -12,6 +12,9 @@ class Vector:
     def __repr__(self):
         return 'Vector(%r, %r)' % (self.x, self.y)
 
+    def __str__(self):
+        return '%d %d' % (self.x, self.y)
+
     def __abs__(self):
         return hypot(self.x, self.y)
 
@@ -36,5 +39,6 @@ def test():
 
     print v1+v2
     print v2*4
+    print repr(v2)
 
 test()
